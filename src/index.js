@@ -1,6 +1,6 @@
+// projefct rest api
 import { Hono } from 'hono'
 import projects from './routes/projects.js'
-import tasks from './routes/tasks.js'
 import { isApiError } from './utils/errors.js'
 import { sendError } from './utils/response.js'
 
@@ -13,7 +13,6 @@ app.use('*', async (c, next) => {
 })
 
 api.route('/projects', projects)
-api.route('/tasks', tasks)
 
 app.route('/api', api)
 
